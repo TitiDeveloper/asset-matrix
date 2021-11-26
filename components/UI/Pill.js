@@ -4,7 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import PlainText from '../Text/PlainText';
 import { Colors } from '../../constants/Colors';
 
-const Pill = () => {
+const Pill = (props) => {
     return (
         <View style={{ ...styles.pill, ...props.containerStyle }}>
             <PlainText style={styles.pillText}>{props.children}</PlainText>
