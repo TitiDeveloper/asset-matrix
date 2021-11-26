@@ -7,7 +7,7 @@ import AMButton from '../../../components/Button/AMButton';
 import { Colors } from '../../../constants/Colors';
 
 const LoginScreen = (props) => {
-  const inputChangeHandler = () => {};
+  const inputChangeHandler = () => { };
 
   return (
     <View style={styles.screen}>
@@ -51,7 +51,9 @@ const LoginScreen = (props) => {
           />
         </View>
 
+        <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('AssetMatrix')}>Login</AMButton>
 
+        <PlainText style={styles.inputLabel}>Forgot password ? Reset Now.</PlainText>
       </View>
     </View>
   );
@@ -98,6 +100,9 @@ const styles = StyleSheet.create({
   input: {},
   formField: {
     marginBottom: 25
+  },
+  button: {
+    marginBottom: 20
   }
 });
 
