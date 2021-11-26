@@ -26,17 +26,26 @@ const AMNavigator = createStackNavigator({
   Dashboard: {
     screen: DashboardScreen,
     navigationOptions: {
-
+      headerShown: false
     }
   },
   TransferInput: {
-    screen: TransferInputScreen
+    screen: TransferInputScreen,
+    navigationOptions: {
+      headerShown: false
+    }
   },
   TransferSuccess: {
-    screen: TransferSuccessScreen
+    screen: TransferSuccessScreen,
+    navigationOptions: {
+      headerShown: false
+    }
   },
   TransferFailure: {
-    screen: TransferFailureScreen
+    screen: TransferFailureScreen,
+    navigationOptions: {
+      headerShown: false
+    }
   }
 }, {
   defaultNavigationOptions: {
