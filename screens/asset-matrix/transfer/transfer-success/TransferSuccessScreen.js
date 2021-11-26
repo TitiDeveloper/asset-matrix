@@ -1,22 +1,21 @@
 import React from 'react';
-import { View, StyleSheet, DynamicColorIOS } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 import PillButton from '../../../../components/Button/PillButton';
 import PlainText from '../../../../components/Text/PlainText';
 import { Colors } from '../../../../constants/Colors';
 
-
-const TransferSuccessScreen = () => {
+const TransferSuccessScreen = (props) => {
     return (
         <View style={styles.screen}>
             <View style={styles.overlayScreen}>
                 <View style={styles.header}>
                     <View style={styles.headerInfo}>
-                        <Image source={require('assets/icons/icon.png')} style={styles.collapsePressable} />
+                        {/* <Image source={require('assets/icons/icon.png')} style={styles.collapsePressable} /> */}
                     </View>
 
                     <View style={styles.closePressable}>
-                        <Image source={require('assets/icons/icon.png')} />
+                        {/* <Image source={require('assets/icons/icon.png')} /> */}
                     </View>
                 </View>
 
@@ -25,8 +24,8 @@ const TransferSuccessScreen = () => {
                 </View>
 
                 <View style={styles.amountContainer}>
-                    <PlainText>AMOUNT</PlainText>
-                    <PlainText>N15,000</PlainText>
+                    <PlainText style={styles.baseText}>AMOUNT</PlainText>
+                    <PlainText style={styles.headerText}>N15,000</PlainText>
                 </View>
 
                 <View style={styles.profileInfo}>
@@ -34,8 +33,8 @@ const TransferSuccessScreen = () => {
 
                     </View>
                     <View>
-                        <PlainText>Joshua Adewale</PlainText>
-                        <PlainText>UBA Bank - 0928928290</PlainText>
+                        <PlainText style={styles.profileInfoText}>Joshua Adewale</PlainText>
+                        <PlainText style={styles.profileInfoText}>UBA Bank - 0928928290</PlainText>
                     </View>
                 </View>
             </View>
@@ -51,16 +50,16 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         backgroundColor: '#ffffff',
-        paddingTop: 15
+        paddingTop: 60
     },
     overlayScreen: {
-        backgroundColor: 'limegreen',
+        backgroundColor: '#219653',
         flex: 1,
         paddingVertical: 15,
         paddingHorizontal: 15,
         borderTopStartRadius: 20,
         borderTopEndRadius: 20,
-        marginBottom: 20,
+        // marginBottom: 20,
         alignItems: 'center'
     },
     header: {
@@ -74,8 +73,24 @@ const styles = StyleSheet.create({
     messageContainer: {
         marginVertical: 30
     },
+    amountContainer: {
+        alignItems: 'center',
+        marginBottom: 50
+    },
+    baseText: {
+        color: Colors.white,
+        marginBottom: 30
+    },
+    headerText: {
+        color: Colors.white,
+        fontSize: 24,
+        lineHeight: 30,
+        fontWeight: '700'
+    },
     text: {
-        color: Colors.white
+        color: Colors.white,
+        fontSize: 14,
+        lineHeight: 20
     },
     profileInfo: {
         flexDirection: 'row'
@@ -85,10 +100,15 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 50
     },
+    profileInfoText: {
+        color: Colors.white,
+    },
     buttonContainer: {
-        flex: 1,
+        // flex: 1,
+        backgroundColor: '#219653',
         justifyContent: 'flex-end',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingVertical: 50
     }
 });
 

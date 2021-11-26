@@ -7,7 +7,7 @@ import { Colors } from '../../constants/Colors';
 const Pill = (props) => {
     return (
         <View style={{ ...styles.pill, ...props.containerStyle }}>
-            <PlainText style={styles.pillText}>{props.children}</PlainText>
+            <PlainText style={{ ...styles.pillText, ...props.textStyle}}>{props.children}</PlainText>
         </View>
     );
 };
@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
     pill: {
         backgroundColor: '#ffffff',
         borderRadius: 20,
-        padding: 10
+        paddingVertical: 10,
+        paddingHorizontal: 20
     },
     pillText: {
         color: Colors.orangeBurn,

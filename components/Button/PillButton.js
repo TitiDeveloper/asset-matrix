@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { Colors } from '../../constants/Colors';
 
-const PillButton = () => {
+const PillButton = (props) => {
     let buttonStyle = { ...styles.button, ...styles.defaultButton };
     let buttonTextStyle = { ...styles.buttonText, ...styles.defaultBtnText };
   
@@ -13,7 +13,7 @@ const PillButton = () => {
     }
 
     return (
-        <TouchableOpacity activeOpacity={0.7} onPress={() => { }}>
+        <TouchableOpacity activeOpacity={0.7} onPress={props.onButtonTap}>
             <View style={{ ...buttonStyle, ...props.style }}>
                 <Text style={buttonTextStyle}>{props.children}</Text>
             </View>
