@@ -4,16 +4,26 @@ import { createStackNavigator } from 'react-navigation-stack';
 import LandingScreen from '../screens/auth/landing/LandingScreen';
 import AuthOptionsScreen from '../screens/auth/auth-options/AuthOptionsScreen';
 import LoginScreen from '../screens/auth/login/LoginScreen';
+import CreateAccountScreen from '../screens/auth/create-account/CreateAccountScreen'
 import DashboardScreen from '../screens/asset-matrix/dashboard/DashboardScreen';
 import TransferInputScreen from '../screens/asset-matrix/transfer/transfer-input/TransferInputScreen';
 import TransferSuccessScreen from '../screens/asset-matrix/transfer/transfer-success/TransferSuccessScreen';
 import TransferFailureScreen from '../screens/asset-matrix/transfer/transfer-failure/TransferFailureScreen';
+import SetPasswordScreen from '../screens/auth/set-password/SetPasswordScreen';
+import WelcomeScreen from '../screens/auth/welcome/WelcomeScreen';
+import SuccessScreen from '../screens/auth/success/SuccessScreen';
+
 
 const AuthNavigator = createStackNavigator(
   {
     Landing: LandingScreen,
     AuthOptions: AuthOptionsScreen,
-    Login: LoginScreen
+    Login: LoginScreen,
+    CreateAccount: CreateAccountScreen,
+    SetPassword: SetPasswordScreen,
+    Welcome: WelcomeScreen,
+    Success: SuccessScreen
+
   },
   {
     defaultNavigationOptions: {

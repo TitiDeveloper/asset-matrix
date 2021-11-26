@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.primary
     },
     defaultButton: {
-        backgroundColor: Colorslors.white,
+        backgroundColor: Colors.white,
     },
     buttonText: {
         fontSize: 15,

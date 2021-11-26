@@ -3,6 +3,8 @@ import { View, StyleSheet, DynamicColorIOS } from 'react-native';
 
 import PillButton from '../../../../components/Button/PillButton';
 import PlainText from '../../../../components/Text/PlainText';
+import { Colors } from '../../../../constants/Colors';
+
 
 const TransferSuccessScreen = () => {
     return (

@@ -1,9 +1,9 @@
 import React from 'react';
-import { KeyboardAvoidingView, ScrollView, Platform, StyleSheet, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Platform, StyleSheet, SafeAreaView } from 'react-native';
 
 const ScrollableFormView = (props) => {
   return (
-    <View style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <KeyboardAvoidingView
         style={{ flex: 1, ...styles.contentContainer }}
         behavior={'padding'}
@@ -12,7 +12,7 @@ const ScrollableFormView = (props) => {
           {props.children}
         </ScrollView>
       </KeyboardAvoidingView>
-    </View>
+    </SafeAreaView>
   );
 };
 

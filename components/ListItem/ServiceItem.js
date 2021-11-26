@@ -3,11 +3,11 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import PlainText from '../Text/PlainText';
 
-const ServiceItem = () => {
+const ServiceItem = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.item}>
-                <Image source={props.imageSource} style={styles.image} />
+                {/* <Image source={props.imageSource} style={styles.image} /> */}
             </View>
 
             <PlainText>{props.title}</PlainText>
