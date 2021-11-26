@@ -16,7 +16,9 @@ const LifestyleBankingScreen = () => {
                 <PlainText style={styles.sectionTitle}>Features</PlainText>
 
                 <View style={styles.sectionContent}>
-                    
+                    {features && features.map((feature, index) => (
+                        <FeaturesListItem key={index} title={feature.title} description={feature.description} imageSource={feature.imageSource} />
+                    ))}
                 </View>
             </View>
         </ScrollView>
