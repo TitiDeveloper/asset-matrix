@@ -3,7 +3,7 @@ import { View, ScrollView, StyleSheet, ImageBackground } from 'react-native';
 
 import PlainText from '../../../components/Text/PlainText';
 import Pill from '../../../components/UI/Pill';
-import ServiceItem from '../../../components/UI/ServiceItem';
+import ServiceItem from '../../../components/ListItem/ServiceItem';
 
 
 const services = [
@@ -55,7 +55,7 @@ const DashboardScreen = () => {
             </View>
 
             <View>
-                
+
             </View>
         </ScrollView>
     );

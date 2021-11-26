@@ -1,27 +1,16 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
+import { View, StyleSheet, DynamicColorIOS } from 'react-native';
 
-import PlainText from '../../../../components/Text/PlainText';
-import Pill from '../../../../components/UI/Pill';
 import PillButton from '../../../../components/Button/PillButton';
+import PlainText from '../../../../components/Text/PlainText';
 
-const TransferInputScreen = () => {
+const TransferSuccessScreen = () => {
     return (
         <View style={styles.screen}>
             <View style={styles.overlayScreen}>
                 <View style={styles.header}>
                     <View style={styles.headerInfo}>
                         <Image source={require('assets/icons/icon.png')} style={styles.collapsePressable} />
-
-                        <View style={styles.profileInfo}>
-                            <View style={styles.profileAvatar}>
-
-                            </View>
-                            <View>
-                                <PlainText>Joshua Adewale</PlainText>
-                                <PlainText>UBA Bank - 0928928290</PlainText>
-                            </View>
-                        </View>
                     </View>
 
                     <View style={styles.closePressable}>
@@ -29,24 +18,28 @@ const TransferInputScreen = () => {
                     </View>
                 </View>
 
+                <View style={styles.messageContainer}>
+                    <PlainText style={styles.text}>SUCCESS!</PlainText>
+                </View>
+
                 <View style={styles.amountContainer}>
                     <PlainText>AMOUNT</PlainText>
                     <PlainText>N15,000</PlainText>
                 </View>
-            </View>
 
-            <View>
-                <PlainText>QUICK AMOUNTS</PlainText>
+                <View style={styles.profileInfo}>
+                    <View style={styles.profileAvatar}>
 
-                <View style={styles.horizontalList}>
-                    {[2000, 5000, 15000, 20000].map(amount => (
-                        <Pill key={amount} >{amount}</Pill>
-                    ))}
+                    </View>
+                    <View>
+                        <PlainText>Joshua Adewale</PlainText>
+                        <PlainText>UBA Bank - 0928928290</PlainText>
+                    </View>
                 </View>
             </View>
 
             <View style={styles.buttonContainer}>
-                <PillButton type="primary">Transfer</PillButton>
+                <PillButton>Done</PillButton>
             </View>
         </View>
     );
@@ -56,16 +49,17 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         backgroundColor: '#ffffff',
-        paddingVertical: 15
+        paddingTop: 15
     },
     overlayScreen: {
-        backgroundColor: 'brown',
-        height: 300,
+        backgroundColor: 'limegreen',
+        flex: 1,
         paddingVertical: 15,
         paddingHorizontal: 15,
         borderTopStartRadius: 20,
         borderTopEndRadius: 20,
-        marginBottom: 20
+        marginBottom: 20,
+        alignItems: 'center'
     },
     header: {
         flexDirection: 'row',
@@ -75,6 +69,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
 
     },
+    messageContainer: {
+        marginVertical: 30
+    },
+    text: {
+        color: Colors.white
+    },
     profileInfo: {
         flexDirection: 'row'
     },
@@ -83,25 +83,11 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 50
     },
-    collapsePressable: {
-
-    },
-    closePressable: {
-
-    },
-    amountContainer: {
-        marginVertical: 30,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    horizontalList: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginBottom: 20
-    },
     buttonContainer: {
+        flex: 1,
+        justifyContent: 'flex-end',
         alignItems: 'center'
     }
 });
 
-export default TransferInputScreen;
+export default TransferSuccessScreen;
