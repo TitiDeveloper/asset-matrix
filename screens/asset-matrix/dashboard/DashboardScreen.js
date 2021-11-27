@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, ScrollView, StyleSheet, ImageBackground } from 'react-native';
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  ImageBackground,
+  TouchableOpacity
+} from 'react-native';
 
 import PlainText from '../../../components/Text/PlainText';
 import PillButton from '../../../components/Button/PillButton';
 import ServiceItem from '../../../components/ListItem/ServiceItem';
 import { Colors } from '../../../constants/Colors';
+import { Icon } from '../../../constants/Icon';
 
 const services = [
   { title: 'Bill Payments', imageSource: require('assets/icons/icon.png') },
@@ -53,13 +60,20 @@ const DashboardScreen = (props) => {
           ))}
       </View>
 
-      <View style={styles.bannerContainer}>
-        <ImageBackground
-          source={require('assets/images/landing-img.png')}
-          style={styles.banner}>
-          <PlainText style={styles.bannerText}>Lifestyle Banking</PlainText>
-        </ImageBackground>
-      </View>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => props.navigation.navigate('LifestyleBanking')}>
+        <View style={styles.bannerContainer}>
+          <ImageBackground
+            source={require('assets/images/background.png')}
+            style={styles.banner}>
+            <View style={styles.bannerOverlay}>
+              <PlainText style={styles.bannerText}>Lifestyle Banking</PlainText>
+              <Icon name="arrow-right" size={12} color={Colors.white} />
+            </View>
+          </ImageBackground>
+        </View>
+      </TouchableOpacity>
 
       <View></View>
     </ScrollView>
@@ -118,13 +132,18 @@ const styles = StyleSheet.create({
     marginBottom: 30
   },
   banner: {
+    borderRadius: 10,
+    overflow: 'hidden',
+    backgroundColor: '#ccc'
+  },
+  bannerOverlay: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderRadius: 10,
     paddingVertical: 30,
     paddingHorizontal: 20,
-    overflow: 'hidden'
+    backgroundColor: 'rgba(6, 5, 5, 0.31)'
   },
   bannerText: {
     color: Colors.white

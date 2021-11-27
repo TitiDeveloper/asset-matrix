@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     borderRadius: 4
   },
   text: {
-    fontFamily: 'gotham-book',
     color: Colors.darkGray2,
     fontSize: 16
     // lineHeight: 20,
