@@ -70,7 +70,7 @@ const CodeInput = (props) => {
       <SmoothPinCodeInput
         value={inputState.code}
         cellSize={46}
-        codeLength={6}
+        codeLength={4}
         containerStyle={styles.codeInput}
         cellStyle={{ ...styles.cell, borderColor }}
         cellStyleFocused={{ ...styles.focusedCell, borderColor }}
@@ -101,8 +101,9 @@ const styles = StyleSheet.create({
   },
   cell: {
     borderColor: '#dddddd',
-    borderWidth: 1,
-    borderRadius: 4
+    // borderWidth: 1,
+    borderRadius: 4,
+    backgroundColor: '#EFEFEF'
   },
   focusedCell: {
     borderColor: '#dddddd',
