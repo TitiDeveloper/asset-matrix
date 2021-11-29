@@ -35,7 +35,14 @@ const AuthNavigator = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerShown: false
+      headerTitle: '',
+      headerStyle: {
+        elevation: 0,
+      },
+      headerBackImage: () => <View style={{ flexDirection: 'row' }}>
+        <Icon name="caret-left" size={15} color={Colors.orangeBurn} />
+        <PlainText>Back</PlainText>
+      </View>
     }
   }
 );
