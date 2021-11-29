@@ -12,9 +12,11 @@ const CreateAccountScreen = (props) => {
     const inputChangeHandler = () => { };
     return (
         <ScrollableFormView containerStyle={styles.screen}>
+            <PlainText style={styles.title}>Create Account</PlainText>
+            <PlainText style={styles.subtitle}>Let’s setup your account right away !</PlainText>
             <View style={styles.formField}>
                 <PlainText style={styles.inputLabel}>First Name</PlainText>
-                <AMInput 
+                <AMInput
                     id="firstName"
                     containerStyle={styles.input}
                     placeholder="Enter first name"
@@ -24,12 +26,12 @@ const CreateAccountScreen = (props) => {
                     onInputChange={inputChangeHandler}
                     // errorTip="Please enter a valid email address"
                     required
-                    email>   
+                    email>
                 </AMInput>
             </View>
             <View style={styles.formField}>
                 <PlainText style={styles.inputLabel}>Last Name</PlainText>
-                <AMInput 
+                <AMInput
                     id="lastName"
                     containerStyle={styles.input}
                     placeholder="Enter last name"
@@ -39,14 +41,14 @@ const CreateAccountScreen = (props) => {
                     onInputChange={inputChangeHandler}
                     // errorTip="Please enter a valid email address"
                     required
-                    email>   
+                    email>
                 </AMInput>
-                <PlainText style={styles.inputLabel}>Ensure name is the same on BVN</PlainText>   
+                <PlainText style={styles.inputLabel}>Ensure name is the same on BVN</PlainText>
             </View>
 
             <View style={styles.formField}>
                 <PlainText style={styles.inputLabel}>BVN</PlainText>
-                <AMInput 
+                <AMInput
                     id="bvn"
                     containerStyle={styles.input}
                     placeholder="Enter BVN"
@@ -56,13 +58,13 @@ const CreateAccountScreen = (props) => {
                     onInputChange={inputChangeHandler}
                     // errorTip="Please enter a valid email address"
                     required
-                    email>   
-                </AMInput>  
+                    email>
+                </AMInput>
             </View>
 
             <View style={styles.formField}>
                 <PlainText style={styles.inputLabel}>Email</PlainText>
-                <AMInput 
+                <AMInput
                     id="email"
                     containerStyle={styles.input}
                     placeholder="Enter email"
@@ -72,12 +74,12 @@ const CreateAccountScreen = (props) => {
                     onInputChange={inputChangeHandler}
                     errorTip="Please enter a valid email address"
                     required
-                    email>   
+                    email>
                 </AMInput>
             </View>
             <View style={styles.formField}>
                 <PlainText style={styles.inputLabel}>Phone Number</PlainText>
-                <AMInput 
+                <AMInput
                     id="phoneNumber"
                     containerStyle={styles.input}
                     placeholder="Phone Number"
@@ -87,12 +89,12 @@ const CreateAccountScreen = (props) => {
                     onInputChange={inputChangeHandler}
                     // errorTip="Please enter a valid email address"
                     required
-                    email>   
+                    email>
                 </AMInput>
             </View>
-            <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('SetPassword')}>Create account</AMButton>
+            <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('VerifyAccount')}>Create account</AMButton>
         </ScrollableFormView>
-    ) 
+    )
 }
 
 const styles = StyleSheet.create({
@@ -111,7 +113,25 @@ const styles = StyleSheet.create({
         fontSize: 30,
         lineHeight: 30
     },
-   
+
+    title: {
+        fontFamily: 'Avenir',
+        fontWeight: 'bold',
+        fontSize:  15,
+        color: '#3F1D05',
+        marginLeft: 40,
+        marginBottom: 10,
+        marginTop: 20,
+    },
+    subtitle: {
+        fontFamily: 'Avenir',
+        fontSize:  13,
+        color: '#3F1D05',
+        marginLeft: 40,
+        marginBottom: 10,
+        
+    },
+
     inputLabel: {
         marginTop: 10,
         color: '#3F1D05',

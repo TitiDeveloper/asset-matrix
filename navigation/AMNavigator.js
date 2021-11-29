@@ -20,6 +20,7 @@ import { Colors } from '../constants/Colors';
 import { Icon } from '../constants/Icon';
 import PlainText from '../components/Text/PlainText';
 import HMOScreen from '../screens/asset-matrix/lifestyle-banking/hmo/HMOScreen';
+import VerifyAccountScreen from '../screens/auth/verify-account/VerifyAccountScreen';
 
 const AuthNavigator = createStackNavigator(
   {
@@ -29,8 +30,8 @@ const AuthNavigator = createStackNavigator(
     CreateAccount: CreateAccountScreen,
     SetPassword: SetPasswordScreen,
     Welcome: WelcomeScreen,
-    Success: SuccessScreen
-
+    Success: SuccessScreen,
+    VerifyAccount: VerifyAccountScreen
   },
   {
     defaultNavigationOptions: {
@@ -124,8 +125,8 @@ const AMNavigator = createStackNavigator(
 );
 
 const AppNavigator = createSwitchNavigator({
-  AssetMatrix: AMNavigator,
   Auth: AuthNavigator,
+  AssetMatrix: AMNavigator,
 });
 
 export default createAppContainer(AppNavigator);
