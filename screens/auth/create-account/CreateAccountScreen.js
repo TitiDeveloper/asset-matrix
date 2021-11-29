@@ -117,18 +117,18 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'Avenir',
         fontWeight: 'bold',
-        fontSize:  15,
+        fontSize:  18,
+        lineHeight: 20,
         color: '#3F1D05',
         marginLeft: 40,
         marginBottom: 10,
-        marginTop: 20,
     },
     subtitle: {
         fontFamily: 'Avenir',
-        fontSize:  13,
+        fontSize:  16,
         color: '#3F1D05',
         marginLeft: 40,
-        marginBottom: 10,
+        marginBottom: 20,
         
     },
 

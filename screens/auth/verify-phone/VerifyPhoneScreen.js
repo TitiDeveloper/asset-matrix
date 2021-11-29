@@ -4,7 +4,7 @@ import PlainText from "../../../components/Text/PlainText";
 import CodeInput from "../../../components/Form/CodeInput"
 import AMButton from '../../../components/Button/AMButton';
 
-const VerifyAccountScreen = (props) => {
+const VerifyPhoneScreen = (props) => {
     const errorMsg = useRef();
     const inputChangeHandler = useCallback(
         () => {
@@ -13,8 +13,8 @@ const VerifyAccountScreen = (props) => {
     );
     return (
         <View style={styles.screen}>
-            <PlainText style={styles.title}>Verify Account</PlainText>
-            <PlainText style={styles.subtitle}>An OTP has been sent to your email & phone</PlainText>
+            <PlainText style={styles.title}>Verify Phone</PlainText>
+            <PlainText style={styles.subtitle}>An OTP has been sent to +234 812 333 3203</PlainText>
 
             <View>
                 <CodeInput
@@ -24,7 +24,7 @@ const VerifyAccountScreen = (props) => {
                 />
             </View>
 
-            <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('SetPassword')}>Continue</AMButton>
+            <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('PasswordResetSuccess')}>Finish</AMButton>
         </View>
     )
 }
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default VerifyAccountScreen
+export default VerifyPhoneScreen

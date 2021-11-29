@@ -22,17 +22,15 @@ const styles = StyleSheet.create({
     item: {
         justifyContent: 'center',
         alignItems: 'center',
-        height: 50,
-        width: 30,
+        height: 40,
+        width: 32,
         borderRadius: 50,
-        marginBottom: 25,
+        marginBottom: 15,
         marginTop: 40,
-        marginLeft: 30,
-        
-        
+        marginLeft: 30,     
     },
     image: {
-        // marginRight: 20,
+        marginRight: 20,
         width: '250%',
         height:'250%'
 

@@ -14,6 +14,7 @@ import TransferFailureScreen from '../screens/asset-matrix/transfer/transfer-fai
 import SetPasswordScreen from '../screens/auth/set-password/SetPasswordScreen';
 import WelcomeScreen from '../screens/auth/welcome/WelcomeScreen';
 import SuccessScreen from '../screens/auth/success/SuccessScreen';
+import PasswordResetSuccessScreen from '../screens/auth/password-reset-success/PasswordResetSuccessScreen';
 
 import LifestyleBankingScreen from '../screens/asset-matrix/lifestyle-banking/lifestyle-banking/LifestyleBankingScreen';
 import { Colors } from '../constants/Colors';
@@ -21,6 +22,8 @@ import { Icon } from '../constants/Icon';
 import PlainText from '../components/Text/PlainText';
 import HMOScreen from '../screens/asset-matrix/lifestyle-banking/hmo/HMOScreen';
 import VerifyAccountScreen from '../screens/auth/verify-account/VerifyAccountScreen';
+import VerifyPhoneScreen from '../screens/auth/verify-phone/VerifyPhoneScreen';
+
 
 const AuthNavigator = createStackNavigator(
   {
@@ -31,7 +34,9 @@ const AuthNavigator = createStackNavigator(
     SetPassword: SetPasswordScreen,
     Welcome: WelcomeScreen,
     Success: SuccessScreen,
-    VerifyAccount: VerifyAccountScreen
+    PasswordResetSuccess: PasswordResetSuccessScreen,
+    VerifyAccount: VerifyAccountScreen,
+    VerifyPhone: VerifyPhoneScreen
   },
   {
     defaultNavigationOptions: {
@@ -39,10 +44,11 @@ const AuthNavigator = createStackNavigator(
       headerStyle: {
         elevation: 0,
       },
-      headerBackImage: () => <View style={{ flexDirection: 'row' }}>
+      headerBackImage: () => <View style={{ flexDirection: 'row', marginLeft: 15 }}>
         <Icon name="caret-left" size={15} color={Colors.orangeBurn} />
-        <PlainText>Back</PlainText>
-      </View>
+        <PlainText style={{marginLeft: 10, fontSize: 16}}>Back</PlainText>
+      </View>,
+      headerBackTitleVisible: false
     }
   }
 );

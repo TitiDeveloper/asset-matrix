@@ -61,7 +61,7 @@ const DashboardScreen = (props) => {
       </View>
 
       <TouchableOpacity
-        activeOpacity={0.8}
+        activeOpacity={0.9}
         onPress={() => props.navigation.navigate('LifestyleBanking')}>
         <View style={styles.bannerContainer}>
           <ImageBackground

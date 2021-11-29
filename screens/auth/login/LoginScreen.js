@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 
 import PlainText from '../../../components/Text/PlainText';
 import AMInput from '../../../components/Form/AMInput';
@@ -53,7 +53,12 @@ const LoginScreen = (props) => {
 
         <AMButton type="primary" style={styles.button} onButtonTap={() => props.navigation.navigate('AssetMatrix')}>Login</AMButton>
 
-        <PlainText style={styles.inputLabel}>Forgot password ? Reset Now.</PlainText>
+        <TouchableWithoutFeedback onPress={() => props.navigation.navigate('VerifyPhone')}>
+          <View>
+            <PlainText style={styles.inputLabel}>Forgot password ? Reset Now.</PlainText>
+          </View>
+        </TouchableWithoutFeedback>
+
       </View>
     </View>
   );
