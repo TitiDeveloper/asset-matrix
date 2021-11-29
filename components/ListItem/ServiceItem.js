@@ -17,7 +17,7 @@ const ServiceItem = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-       
+       margin: 0
     },
     item: {
         justifyContent: 'center',
