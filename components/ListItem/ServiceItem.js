@@ -7,7 +7,7 @@ const ServiceItem = (props) => {
     return (
         <View style={styles.container}>
             <View style={styles.item}>
-                {/* <Image source={props.imageSource} style={styles.image} /> */}
+                <Image source={props.imageSource} style={styles.image} />
             </View>
 
             <PlainText>{props.title}</PlainText>
@@ -22,13 +22,20 @@ const styles = StyleSheet.create({
     item: {
         justifyContent: 'center',
         alignItems: 'center',
-        height: 30,
+        height: 50,
         width: 30,
         borderRadius: 50,
-        marginBottom: 15
+        marginBottom: 25,
+        marginTop: 40,
+        marginLeft: 30,
+        
+        
     },
     image: {
-        
+        // marginRight: 20,
+        width: '250%',
+        height:'250%'
+
     }
 });
 

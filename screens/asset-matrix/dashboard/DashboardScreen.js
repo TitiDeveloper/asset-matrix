@@ -14,10 +14,10 @@ import { Colors } from '../../../constants/Colors';
 import { Icon } from '../../../constants/Icon';
 
 const services = [
-  { title: 'Bill Payments', imageSource: require('assets/icons/icon.png') },
-  { title: 'Loans', imageSource: require('assets/icons/icon.png') },
-  { title: 'Savings', imageSource: require('assets/icons/icon.png') },
-  { title: 'Investments', imageSource: require('assets/icons/icon.png') }
+  { title: 'Bill Payments', imageSource: require('assets/icons/Group-40.png') },
+  { title: 'Loans', imageSource: require('assets/icons/Group-41.png') },
+  { title: 'Savings', imageSource: require('assets/icons/Group-42.png') },
+  { title: 'Investments', imageSource: require('assets/icons/Group-43.png') }
 ];
 
 const DashboardScreen = (props) => {
@@ -54,7 +54,7 @@ const DashboardScreen = (props) => {
           services.map((service, index) => (
             <ServiceItem
               key={index}
-              title={service.title}
+              // title={service.title}
               imageSource={service.imageSource}
             />
           ))}
@@ -81,6 +81,16 @@ const DashboardScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+  image: {
+    width: '90%',
+    height: '70%'
+  },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   screen: {
     paddingHorizontal: 20,
     paddingTop: 60
@@ -126,7 +136,10 @@ const styles = StyleSheet.create({
   servicesPanel: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 20
+    marginBottom: 20,
+    // width: '90%',
+    // height: '70%'
+
   },
   bannerContainer: {
     marginBottom: 30

@@ -19,8 +19,8 @@ const TransferInputScreen = (props) => {
 
                             </View>
                             <View>
-                                <PlainText>Joshua Adewale</PlainText>
-                                <PlainText>UBA Bank - 0928928290</PlainText>
+                                <PlainText style={styles.text}>Joshua Adewale</PlainText>
+                                <PlainText style={styles.text}>UBA Bank - 0928928290</PlainText>
                             </View>
                         </View>
                     </View>
@@ -118,7 +118,11 @@ const styles = StyleSheet.create({
     },
     pill: {
         borderWidth: 1,
-        borderColor: '#D8D7DA'
+        borderColor: '#D8D7DA',
+        // color:'#ffffff'
+    },
+    text: {
+        color:'#ffffff'
     }
 });
 
